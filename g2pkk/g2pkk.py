@@ -38,12 +38,7 @@ class G2p(object):
 
     def check_mecab(self):
         if platform.system()=='Windows':
-            spam_spec = importlib.util.find_spec("eunjeon")
-            non_found = spam_spec is None
-            if non_found:
-                print(f'you have to install eunjeon. install it...')
-                p = subprocess.Popen('pip install eunjeon')
-                p.wait()
+           pass
         else:
             spam_spec = importlib.util.find_spec("mecab")
             non_found = spam_spec is None

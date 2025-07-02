@@ -51,10 +51,10 @@ class G2p(object):
     def get_mecab(self):
         if platform.system() == 'Windows':
             try:
-                m = self.load_module_func('eunjeon')
-                return m.Mecab()
+                    import MeCab
+                    return MeCab.Tagger()
             except Exception as e:
-                raise print(f'you have to install eunjeon. "pip install eunjeon"')
+                raise print(f'you have to install mecab. "pip install mecab"')
         else:
             try:
                 m = self.load_module_func('mecab')
